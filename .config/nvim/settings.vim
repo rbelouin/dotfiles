@@ -19,3 +19,4 @@ set autoread
 set t_Co=256
 set ignorecase
 set smartcase
+set mouse=a
