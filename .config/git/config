@@ -1,0 +1,27 @@
+[user]
+	email = rodolphe.belouin@gmail.com
+	name = Rodolphe Belouin
+
+[alias]
+  ai = add --intent-to-add -A
+  ap = add -p
+  b  = branch
+  ci = commit -v
+  co = checkout
+  cl = clean -dfx
+  l  = log --pretty=\"format:%C(auto)%h%C(reset) %C(red)[%ad]%C(reset) %C(auto)%s%d%C(reset) %C(blue)[%an]%C(reset)\" --date=short
+  s  = status
+  d  = diff
+  dw = diff --word-diff
+  f  = fetch --all -p
+  r  = remote -v
+  rh = reset --hard
+
+[merge]
+	tool = vimdiff
+[core]
+	excludesfile = ~/.config/git/ignore
+[push]
+	default = simple
+[rebase]
+	autosquash = true
