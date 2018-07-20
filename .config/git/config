@@ -25,3 +25,6 @@
 	default = simple
 [rebase]
 	autosquash = true
+
+[include]
+  path = nova
