@@ -4,9 +4,6 @@ setopt correct
 setopt prompt_subst
 
 bindkey "^["	  vi-cmd-mode
-bindkey "^[[A"  fzf-history-widget
-bindkey '^P'    up-line-or-history
-bindkey '^N'    down-line-or-history
 
 HISTSIZE=10000
 SAVEHIST=10000
