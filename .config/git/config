@@ -12,6 +12,7 @@
   l  = log --pretty=\"format:%C(auto)%h%C(reset) %C(red)[%ad]%C(reset) %C(auto)%s%d%C(reset) %C(blue)[%an]%C(reset)\" --date=short
   s  = status
   d  = diff
+  di = difftool -t img
   dw = diff --word-diff
   f  = fetch --all -p
   r  = remote -v
@@ -28,3 +29,6 @@
 
 [include]
   path = nova
+
+[difftool "img"]
+  cmd = compare "$REMOTE" "$LOCAL" png:- | montage -geometry 800x -label "reference" "$LOCAL" -label "diff" - -label "current--%f" "$REMOTE" diff.png && open diff.png
