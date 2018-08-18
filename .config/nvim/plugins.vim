@@ -44,10 +44,14 @@ let g:fzf_colors =
 " fzf: jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
+let g:ale_linters = {
+\   'typescript': ['prettier', 'tslint', 'tsserver', 'typecheck'],
+\}
+
 " ale: list of fixers
 let g:ale_fixers = {
 \   'javascript': ['prettier', 'eslint'],
-\   'typescript': ['prettier', 'eslint'],
+\   'typescript': ['prettier', 'tslint'],
 \}
 
 " ale: don't lint while typing
