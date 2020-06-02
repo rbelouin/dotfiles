@@ -34,4 +34,4 @@
   path = nova
 
 [difftool "img"]
-  cmd = compare "$REMOTE" "$LOCAL" png:- | montage -geometry 800x -label "reference" "$LOCAL" -label "diff" - -label "current--%f" "$REMOTE" diff.png && open diff.png
+  cmd = compare "$REMOTE" "$LOCAL" png:- | montage -geometry 800x -label "reference" "$LOCAL" -label "diff" - -label "current--%f" "$REMOTE" /tmp/diff.png && open /tmp/diff.png
