@@ -19,6 +19,9 @@ Plugin 'HerringtonDarkholme/yats.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'junegunn/fzf.vim'
 Plugin 'w0rp/ale'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'mhartington/nvim-typescript'
+Plugin 'vim-airline/vim-airline'
 
 call vundle#end()
 
@@ -51,7 +54,13 @@ let g:ale_linters = {
 " ale: list of fixers
 let g:ale_fixers = {
 \   'javascript': ['prettier', 'eslint'],
-\   'typescript': ['prettier', 'tslint'],
+\   'json': ['prettier'],
+\   'typescript': ['prettier', 'eslint'],
+\   'typescriptreact': ['prettier', 'eslint'],
+\   'css': ['prettier'],
+\   'less': ['prettier'],
+\   'scss': ['prettier'],
+\   'scala': ['sbtserver'],
 \}
 
 " ale: don't lint while typing
@@ -59,3 +68,6 @@ let g:ale_lint_on_text_changed = 'normal'
 
 " ale: fix when saving the file
 let g:ale_fix_on_save = 1
+
+" deoplete: enable language autocomplete
+let g:deoplete#enable_at_startup = 1
