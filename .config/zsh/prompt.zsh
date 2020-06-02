@@ -18,13 +18,19 @@ function git_branch {
 }
 
 function git_status {
-  if [[ $(git status --porcelain | grep -o "^[ ?][DM?] *" | wc -l | tr -d " ") -gt 0 ]]; then
+  local GIT_STATUS_IGNORED=$(echo $GIT_STATUS_IGNORE_PATHS | tr ':' '\n' | grep -c $PWD)
+
+  if [[ $GIT_STATUS_IGNORED -gt "0" ]]; then
+    GIT_MODIFIED="?"
+  elif [[ $(git status --porcelain | grep -o "^[ ?][DM?] *" | wc -l | tr -d " ") -gt 0 ]]; then
     GIT_MODIFIED="*"
   else
     GIT_MODIFIED=""
   fi
 
-  if [[ $(git status --porcelain | grep -o '^[ADM] *' | wc -l | tr -d " ") -gt 0 ]]; then
+  if [[ $GIT_STATUS_IGNORED -gt "0" ]]; then
+    GIT_SAVED=""
+  elif [[ $(git status --porcelain | grep -o '^[ADM] *' | wc -l | tr -d " ") -gt 0 ]]; then
     GIT_SAVED="+"
   else
     GIT_SAVED=""
