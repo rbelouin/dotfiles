@@ -62,6 +62,9 @@ let g:ale_fix_on_save = 1
 " deoplete: enable language autocomplete
 let g:deoplete#enable_at_startup = 1
 
+" airline: use powerline characters in the status line
+let g:airline_powerline_fonts = 1
+
 lua << EOF
 local nvim_lsp = require('lspconfig')
 
