@@ -1,6 +1,6 @@
 " Color Scheme
 syntax on
-colorscheme nova
+colorscheme nord
 
 " Identation
 set smartindent
