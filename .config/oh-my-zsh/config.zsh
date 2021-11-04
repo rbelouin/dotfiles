@@ -2,6 +2,8 @@ export EDITOR=nvim
 export HISTFILE="$HOME/.history"
 export JAVA_HOME=$(/usr/libexec/java_home)
 
+PATH="$PATH:$HOME/.cargo/bin"
+
 alias c='git --git-dir="$HOME/src/dotfiles/" --work-tree="$HOME"'
 alias f='fzf'
 alias g='git'
