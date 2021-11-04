@@ -1,4 +1,5 @@
 export EDITOR=nvim
+export GPG_TTY="$(tty)"
 export HISTFILE="$HOME/.history"
 export JAVA_HOME=$(/usr/libexec/java_home)
 
