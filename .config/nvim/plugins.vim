@@ -12,7 +12,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim'
-Plug 'vim-airline/vim-airline'
+Plug 'feline-nvim/feline.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
@@ -66,8 +66,19 @@ let g:ale_fix_on_save = 1
 " deoplete: enable language autocomplete
 let g:deoplete#enable_at_startup = 1
 
-" airline: use powerline characters in the status line
-let g:airline_powerline_fonts = 1
+" feline: need the following options to be enabled
+set tgc
+
+" feline: use default configuration
+lua << EOF
+local ctp_feline = require('catppuccin.groups.integrations.feline')
+
+ctp_feline.setup({})
+
+require("feline").setup({
+  components = ctp_feline.get(),
+})
+EOF
 
 lua << EOF
 require("catppuccin").setup({
