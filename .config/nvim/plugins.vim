@@ -9,8 +9,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim'
 Plug 'vim-airline/vim-airline'
-Plug 'arcticicestudio/nord-vim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " Initialize plugin system
 call plug#end()

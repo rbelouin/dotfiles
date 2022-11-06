@@ -1,6 +1,6 @@
 " Color Scheme
 syntax on
-colorscheme nord
+colorscheme catppuccin-macchiato
 
 " Identation
 set smartindent
