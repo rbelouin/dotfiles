@@ -4,8 +4,12 @@ Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug '907th/vim-auto-save'
-Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeFind', 'NERDTreeToggle'] }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'nvim-lua/plenary.nvim'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-neo-tree/neo-tree.nvim', { 'branch': 'v2.x' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim'
 Plug 'vim-airline/vim-airline'
@@ -64,6 +68,14 @@ let g:deoplete#enable_at_startup = 1
 
 " airline: use powerline characters in the status line
 let g:airline_powerline_fonts = 1
+
+lua << EOF
+require("catppuccin").setup({
+    integrations = {
+        neotree = true
+    }
+})
+EOF
 
 lua << EOF
 local nvim_lsp = require('lspconfig')

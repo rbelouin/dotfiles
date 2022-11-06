@@ -1,7 +1,7 @@
 let mapleader = ","
 
 nmap <Leader>b :Buffers<CR>
-nmap <Leader>f :NERDTreeFind<CR>
+nmap <Leader>f :NeoTreeReveal<CR>
 nmap <Leader>h :History<CR>
 nmap <Leader>p :b#<CR>
 nmap <Leader>r :Rg<Space>
