@@ -10,5 +10,6 @@ alias f='fzf'
 alias g='git'
 alias e="$EDITOR"
 
-# For some reason, ^T is not properly bound by fzf when the oh-my-zsh environment gets initialized
+# For some reason, ^R and ^T are not properly bound by fzf when the oh-my-zsh environment gets initialized
+bindkey '^R' fzf-history-widget
 bindkey '^T' fzf-file-widget
