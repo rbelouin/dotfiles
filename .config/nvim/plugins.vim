@@ -2,6 +2,7 @@ call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-fugitive'
 Plug '907th/vim-auto-save'
 Plug 'nvim-lua/plenary.nvim'
@@ -65,6 +66,9 @@ let g:ale_fix_on_save = 1
 
 " deoplete: enable language autocomplete
 let g:deoplete#enable_at_startup = 1
+
+" vim-rhubarb: add support for browsing Spotify’s GitHub Enterprise
+let g:github_enterprise_urls = ['ghe.spotify.net']
 
 " feline: need the following options to be enabled
 set tgc
