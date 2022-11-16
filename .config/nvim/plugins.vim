@@ -16,6 +16,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'feline-nvim/feline.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'rust-lang/rust.vim'
 
 " Initialize plugin system
 call plug#end()
