@@ -57,6 +57,7 @@ let g:ale_fixers = {
 \   'less': ['prettier'],
 \   'scss': ['prettier'],
 \   'scala': ['sbtserver'],
+\   'sql': ['pgformatter'],
 \}
 
 " ale: don't lint while typing
