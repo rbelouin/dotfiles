@@ -24,6 +24,7 @@
 [merge]
 	tool = vimdiff
 [core]
+  pager = delta
 	excludesfile = ~/.config/git/ignore
 [push]
 	default = simple
@@ -35,3 +36,12 @@
 
 [difftool "img"]
   cmd = compare "$REMOTE" "$LOCAL" png:- | montage -geometry 800x -label "reference" "$LOCAL" -label "diff" - -label "current--%f" "$REMOTE" /tmp/diff.png && open /tmp/diff.png
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+
+[diff]
+  colorMoved = default
