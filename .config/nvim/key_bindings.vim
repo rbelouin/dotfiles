@@ -7,6 +7,7 @@ nmap <Leader>p :b#<CR>
 nmap <Leader>r :Rg<Space>
 nmap <Leader>t :GitFiles<CR>
 nmap <Leader>c :set cursorcolumn!<CR>
+nmap <Leader>a :ALEFix<CR>
 nmap <Leader><Space> :TSType<CR>
 nmap <Leader><CR> :TSDefPreview<CR>
 

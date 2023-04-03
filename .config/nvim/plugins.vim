@@ -50,7 +50,8 @@ let g:ale_linters = {
 " ale: list of fixers
 let g:ale_fixers = {
 \   'javascript': ['prettier', 'eslint'],
-\   'json': ['prettier'],
+\   'json': ['prettier', 'eslint'],
+\   'jsonc': ['prettier', 'eslint'],
 \   'typescript': ['prettier', 'eslint'],
 \   'typescriptreact': ['prettier', 'eslint'],
 \   'css': ['prettier'],
@@ -64,7 +65,7 @@ let g:ale_fixers = {
 let g:ale_lint_on_text_changed = 'normal'
 
 " ale: fix when saving the file
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 
 " deoplete: enable language autocomplete
 let g:deoplete#enable_at_startup = 1
