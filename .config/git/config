@@ -22,7 +22,7 @@
   rh = reset --hard
 
 [merge]
-	tool = vimdiff
+	tool = nvimdiff
 [core]
   pager = delta
 	excludesfile = ~/.config/git/ignore
