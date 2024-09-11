@@ -5,6 +5,8 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 
 PATH="$PATH:$HOME/.local/bin"
 
+source "$HOME/.config/oh-my-zsh/fzf-git.sh"
+
 alias c='git --git-dir="$HOME/src/personal/dotfiles.git/" --work-tree="$HOME"'
 alias f='fzf'
 alias g='git'
