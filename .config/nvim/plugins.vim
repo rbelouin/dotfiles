@@ -53,6 +53,7 @@ let g:ale_fixers = {
 \   'javascript': ['prettier', 'eslint'],
 \   'json': ['prettier', 'eslint'],
 \   'jsonc': ['prettier', 'eslint'],
+\   'haskell': ['cabal-ghc'],
 \   'typescript': ['prettier', 'eslint'],
 \   'typescriptreact': ['prettier', 'eslint'],
 \   'css': ['prettier'],
@@ -138,4 +139,21 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
+
+nvim_lsp['hls'].setup {
+  on_attach = nvim_lsp_on_attach,
+  cmd = { "haskell-language-server-wrapper", "--lsp" },
+  settings = {
+    haskell = {
+      plugin = {
+        rename = {
+          config = {
+            crossModule = true
+          }
+        }
+      }
+    }
+  }
+}
+
 EOF

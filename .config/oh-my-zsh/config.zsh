@@ -3,7 +3,7 @@ export GPG_TTY="$(tty)"
 export HISTFILE="$HOME/.history"
 export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 
-PATH="$PATH:$HOME/.cargo/bin"
+PATH="$PATH:$HOME/.local/bin"
 
 alias c='git --git-dir="$HOME/src/personal/dotfiles.git/" --work-tree="$HOME"'
 alias f='fzf'
