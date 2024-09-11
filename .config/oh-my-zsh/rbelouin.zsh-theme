@@ -12,9 +12,8 @@ PS1="%F{$SURFACE_1}\${(l.\$COLUMNS..-.)}%{$reset_color%}
 %F{$BASE}%(!.%K{$RED}.%K{$BLUE})  %1d %(!.%F{$RED}.%F{$BLUE})\$(git_prompt_info)%K{$BASE}%{$reset_color%} "
 PS2="%F{$RED}\ %{$reset_color%}"
 
-# right prompt: return code, virtualenv and context (user@host)
+# right prompt: return code
 RPS1="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
-RPS1+=" %F{$SURFACE_1}%n@%m%{$reset_color%}"
 
 # git settings
 ZSH_THEME_GIT_PROMPT_PREFIX="%K{$SAPPHIRE} %F{$BASE} "
